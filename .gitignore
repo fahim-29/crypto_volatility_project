@@ -1,0 +1,20 @@
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.pkl
+*.h5
+.env
+.DS_Store
+
+# Logs & cache
+logs/
+*.log
+
+# Data & artifacts
+data/
+artifacts/*.csv
+artifacts/*.parquet
+
+# System files
+.DS_Store
+Thumbs.db
