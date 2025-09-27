@@ -18,6 +18,17 @@ The system covers:
 ---
 
 ---
+---
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/fahim-29/crypto_volatility_project.git
+   cd crypto_volatility_project
+
+
+
 
 ## 📊 Results
 - **Best Model**: RandomForest Regressor  
