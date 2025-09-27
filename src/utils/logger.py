@@ -1,28 +1,41 @@
 import logging
 from pathlib import Path
 
+
 def get_logger(name: str, log_file: str = "logs/project.log") -> logging.Logger:
-    """Initialize and return a logger."""
-    log_path = Path(log_file)
-    log_path.parent.mkdir(parents=True, exist_ok=True)
+    """Creates and configures a logger that writes to both console and file."""
+    Path("logs").mkdir(parents=True, exist_ok=True)
 
     logger = logging.getLogger(name)
     logger.setLevel(logging.INFO)
 
+    # Avoid duplicate handlers if logger already exists
     if not logger.handlers:
-        fh = logging.FileHandler(log_path)
+        # Console handler
         ch = logging.StreamHandler()
+        ch.setLevel(logging.INFO)
 
-        formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-        fh.setFormatter(formatter)
+        # File handler
+        fh = logging.FileHandler(log_file)
+        fh.setLevel(logging.INFO)
+
+        # Formatter
+        formatter = logging.Formatter(
+            "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        )
         ch.setFormatter(formatter)
+        fh.setFormatter(formatter)
 
-        logger.addHandler(fh)
+        # Add handlers
         logger.addHandler(ch)
+        logger.addHandler(fh)
 
     return logger
 
 
 if __name__ == "__main__":
-    log = get_logger(__name__)
-    log.info("Logger is working!")
+    logger = get_logger("test_logger")
+    print("🔹 Running logger test...")
+    logger.info("Logger is working!")
+
+
