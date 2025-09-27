@@ -20,3 +20,8 @@ Thumbs.db
 # data/
 artifacts/*.csv
 artifacts/*.parquet
+
+
+# Ignore trained models
+artifacts/models/
+*.joblib
