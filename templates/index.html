@@ -1,0 +1,36 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Crypto Volatility - Predict</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Crypto Volatility Predictor</h1>
+    <p>Upload a model-ready CSV (same columns used in training) to get volatility predictions.</p>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="flashes">
+        {% for msg in messages %}
+          <li>{{ msg }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="post" action="{{ url_for('predict') }}" enctype="multipart/form-data">
+      <label for="file">Choose CSV file:</label>
+      <input type="file" id="file" name="file" accept=".csv" required>
+      <label for="max_rows">Max rows to predict (default 100):</label>
+      <input type="number" id="max_rows" name="max_rows" min="1" value="100">
+      <button type="submit">Predict</button>
+    </form>
+
+    <hr>
+    <p>Tip: To test quickly, upload <code>artifacts/crypto_features_model.csv</code>.</p>
+  </div>
+</body>
+</html>
