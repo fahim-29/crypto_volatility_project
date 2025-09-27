@@ -1,27 +1,37 @@
+# Python cache and compiled files
 __pycache__/
-.ipynb_checkpoints/
 *.pyc
-*.pkl
-*.h5
+*.pyo
+*.pyd
+
+# Virtual environments
 .env
-.DS_Store
-
-# Logs & cache
-logs/
-*.log
-
+.venv/
+venv/
+env/
 
 # System files
 .DS_Store
 Thumbs.db
 
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
 
-# Data & artifacts
-# data/
-artifacts/*.csv
-artifacts/*.parquet
+# Logs
+logs/
+*.log
 
+# Artifacts (models, preprocessed data, predictions)
+artifacts/
+uploads/
+predictions/
 
-# Ignore trained models
-artifacts/models/
+# Large/binary files
+*.pkl
 *.joblib
+*.h5
+*.parquet
+*.csv
+
+# Keep ONLY sample input data (allow crypto_prices.csv inside data/)
+!data/crypto_prices.csv
