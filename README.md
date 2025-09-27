@@ -1,23 +1,7 @@
-# 🚀 Cryptocurrency Volatility Prediction
-
-## 📌 Project Overview
-Cryptocurrency markets are notoriously volatile, making it crucial for traders and institutions to forecast volatility for **risk management, portfolio allocation, and informed decision-making**.  
-
-This project builds a **complete ML pipeline** to predict cryptocurrency volatility based on historical OHLC (Open, High, Low, Close) prices, trading volume, and market capitalization.  
-
-The system covers:  
-✅ Data ingestion → transformation → feature engineering  
-✅ Model training (RandomForest, XGBoost) → evaluation  
-✅ Saving best pipeline → prediction  
-✅ Local deployment with a Flask web app  
-
----
-
-## 📂 Folder Structure
 
 # 🚀 Cryptocurrency Volatility Prediction
 
-## 📌 Project Overview
+##  Project Overview
 Cryptocurrency markets are notoriously volatile, making it crucial for traders and institutions to forecast volatility for **risk management, portfolio allocation, and informed decision-making**.  
 
 This project builds a **complete ML pipeline** to predict cryptocurrency volatility based on historical OHLC (Open, High, Low, Close) prices, trading volume, and market capitalization.  
@@ -123,10 +107,6 @@ python -m src.pipeline.prediction_pipeline
 python app.py
 
 ```
-
-
-  
-
 
 
 ## 📊 Results
