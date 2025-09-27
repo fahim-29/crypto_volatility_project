@@ -6,8 +6,6 @@ tensorflow
 seaborn
 xgboost
 scikit-learn
-
-
-
 joblib
 flask
+jupyter
