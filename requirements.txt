@@ -8,3 +8,6 @@ xgboost
 scikit-learn
 
 
+
+joblib
+flask
