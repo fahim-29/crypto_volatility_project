@@ -1,0 +1,11 @@
+digraph DataIngestion {
+    rankdir=TB;
+    node [shape=box, style=filled, color=lightblue, fontname=Arial];
+
+    RawCSV [label="Raw Crypto Data (CSV/Parquet)"];
+    Load [label="Load Data (pandas.read_csv / read_parquet)"];
+    SaveRaw [label="Save Copy to artifacts/raw/raw_data.csv"];
+    Output [label="Output DataFrame"];
+
+    RawCSV -> Load -> SaveRaw -> Output;
+}

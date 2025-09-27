@@ -1,0 +1,11 @@
+digraph PredictionPipeline {
+    rankdir=TB;
+    node [shape=box, style=filled, color=lightblue, fontname=Arial];
+
+    InputCSV [label="New Input CSV (features)"];
+    LoadModel [label="Load Best Model\nbest_pipeline.joblib"];
+    Predict [label="Pipeline.predict()"];
+    Output [label="Predictions + Downloadable CSV"];
+
+    InputCSV -> LoadModel -> Predict -> Output;
+}

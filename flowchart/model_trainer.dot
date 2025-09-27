@@ -1,0 +1,15 @@
+digraph ModelTrainer {
+    rankdir=TB;
+    node [shape=box, style=filled, color=lightblue, fontname=Arial];
+
+    Input [label="Train/Test Data"];
+    RF [label="RandomForestRegressor"];
+    XGB [label="XGBRegressor"];
+    Eval [label="Evaluate Models\n(RMSE, MAE, R²)"];
+    Select [label="Select Best Model"];
+    Save [label="Save Best Pipeline\nartifacts/models/best_pipeline.joblib"];
+
+    Input -> RF -> Eval;
+    Input -> XGB -> Eval;
+    Eval -> Select -> Save;
+}

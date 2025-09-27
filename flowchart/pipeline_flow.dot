@@ -1,0 +1,16 @@
+digraph Pipeline {
+    rankdir=TB;
+    node [shape=box, style=filled, color=lightblue, fontname=Arial];
+
+    RawData [label="Raw Data (CSV)"];
+    Ingestion [label="Data Ingestion"];
+    Transformation [label="Data Transformation"];
+    Features [label="Feature Engineering"];
+    Training [label="Model Training\n(RandomForest, XGBoost)"];
+    Evaluation [label="Model Evaluation"];
+    BestModel [label="Best Model Saved\n(best_pipeline.joblib)"];
+    Prediction [label="Prediction Pipeline"];
+    Deployment [label="Deployment (Flask App)"];
+
+    RawData -> Ingestion -> Transformation -> Features -> Training -> Evaluation -> BestModel -> Prediction -> Deployment;
+}

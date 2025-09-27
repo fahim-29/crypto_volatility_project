@@ -1,0 +1,17 @@
+digraph DataTransformation {
+    rankdir=TB;
+    node [shape=box, style=filled, color=lightblue, fontname=Arial];
+
+    Input [label="Input DataFrame"];
+    Split [label="Split Numerical vs Categorical"];
+    NumPipe [label="Numerical Pipeline\n(SimpleImputer, StandardScaler)"];
+    CatPipe [label="Categorical Pipeline\n(SimpleImputer, OneHotEncoder)"];
+    Combine [label="ColumnTransformer"];
+    Save [label="Save Preprocessor\nartifacts/transformer/preprocessor.joblib"];
+    Output [label="Transformed Data"];
+
+    Input -> Split;
+    Split -> NumPipe -> Combine;
+    Split -> CatPipe -> Combine;
+    Combine -> Save -> Output;
+}
