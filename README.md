@@ -15,7 +15,7 @@ The system covers:
 
 ## 📂 Folder Structure
 
-
+```text
 crypto_volatility_project/
 │── data/                  # Dataset(s)
 │   └── crypto_prices.csv
@@ -48,8 +48,7 @@ crypto_volatility_project/
 │── main.py                # Entry point (optional)
 │── requirements.txt       # Project dependencies
 │── README.md              # Project documentation (this file)
-
-
+```
 
 ## ⚙️ Installation & Setup
 
@@ -73,7 +72,7 @@ python -m src.pipeline.prediction_pipeline
 
 # 6. Start the Flask web app
 python app.py
-
+```
 
 
 ## 📊 Results
