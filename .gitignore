@@ -10,11 +10,13 @@ __pycache__/
 logs/
 *.log
 
-# Data & artifacts
-data/
-artifacts/*.csv
-artifacts/*.parquet
 
 # System files
 .DS_Store
 Thumbs.db
+
+
+# Data & artifacts
+# data/
+artifacts/*.csv
+artifacts/*.parquet
