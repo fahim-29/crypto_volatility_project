@@ -37,5 +37,8 @@ if __name__ == "__main__":
     logger = get_logger("test_logger")
     print("🔹 Running logger test...")
     logger.info("Logger is working!")
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 89da243 (Updated prediction pipeline and logger)

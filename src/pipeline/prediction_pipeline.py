@@ -1,6 +1,7 @@
-
-# src/pipeline/prediction_pipeline.py
-
+"""Simple prediction utility that loads saved pipeline and predicts on new data.
+Example usage:
+from src.pipeline.prediction_pipeline import load_pipeline_and_predict
+"""
 from pathlib import Path
 import pandas as pd
 import joblib
