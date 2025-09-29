@@ -1,4 +1,7 @@
 
+![Project Banner](images/github_banner.png)
+
+
 # 🚀 Cryptocurrency Volatility Prediction
 
 ##  Project Overview
