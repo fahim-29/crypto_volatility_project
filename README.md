@@ -118,6 +118,22 @@ python app.py
 
 ---
 
+## 📊 Model Performance Comparison
+
+I evaluated multiple models to predict cryptocurrency volatility.  
+The results are summarized below:
+
+![Model Performance Comparison](images/model_performance_comparison.png)
+
+### 🔎 Insights
+- **Linear Regression** → Performed poorly (negative R²), not suitable for this dataset.  
+- **Random Forest (default)** → Strong baseline with high R² (~0.94).  
+- **XGBoost (default)** → Competitive performance, slightly lower than Random Forest.  
+- **Random Forest (tuned)** → Achieved the **best performance** with R² ~0.937 and lowest RMSE/MAE.  
+👉 Overall, the **tuned Random Forest Regressor** was selected as the best model for cryptocurrency volatility prediction.
+
+
+
 ## 📖 Documentation
 - [High-Level Design (HLD)](docs/HLD.md)  
 - [Low-Level Design (LLD)](docs/LLD.md)  
